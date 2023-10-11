@@ -7,6 +7,15 @@
     --mc-violet: #8338ec;
     --mc-blue: #3a86ff;
 }
+.txt-yellow {
+    color: var(--mc-yellow);
+}
+.txt-blue {
+    color: var(--mc-blue);
+}
+.txt-white {
+    color: white;
+}
 
 /* utility */
 
@@ -14,13 +23,20 @@ body {
     background-color: var(--mc-blue);
 }
 #wrapper {
-    height: 80vh;
-    width: 60vw;
+    width: 40vw;
+    height: 40vw;
 }
 .box {
-    width: 50px;
-    height: 50px;
-    margin: 5px
+    width: calc(100% / 10 - 10px);
+    height: calc(100% / 10 - 10px);
+    margin: 5px;
+    background-color: var(--mc-violet);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: scale 1s;
+}
+.box:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
 .divisible-three {
     background-color: var(--mc-orange);
@@ -30,4 +46,76 @@ body {
 }
 .divisible-five-three {
     background-color: var(--mc-pink);
+}
+.credits {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+.sun {
+    background-color: yellow;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    position: absolute;
+    left: -250px;
+    top: -250px;
+    border-radius: 50%;
+    animation-name: bg-swap;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+.line {
+    width: 100px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: yellow;
+    animation-name: bg-swap;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+.line1 {
+    position: absolute;
+    right: 180px;
+    bottom: -80px;
+    rotate: 90deg;
+}
+.line2 {
+    position: absolute;
+    right: 80px;
+    bottom: -60px;
+    rotate: 60deg;
+}
+.line3 {
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    rotate: 45deg;
+}
+.line4 {
+    position: absolute;
+    right: -90px;
+    bottom: 60px;
+    rotate: 36deg;
+}
+.line5 {
+    position: absolute;
+    right: -125px;
+    bottom: 150px;
+    rotate: 22deg;
+}
+.line6 {
+    position: absolute;
+    right: -150px;
+    top: 260px;
+}
+
+/* animation */
+
+@keyframes bg-swap {
+    0% {background-color: yellow;}
+    50% {background-color: red;
+        scale: 1.2;
+        }
+    100% {background-color: yellow;}
 }

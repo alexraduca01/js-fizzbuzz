@@ -23,5 +23,11 @@ body {
     margin: 5px
 }
 .divisible-three {
-    background-color: ;
+    background-color: var(--mc-orange);
+}
+.divisible-five {
+    background-color: var(--mc-yellow);
+}
+.divisible-five-three {
+    background-color: var(--mc-pink);
 }

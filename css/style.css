@@ -13,7 +13,7 @@
 body {
     background-color: var(--mc-blue);
 }
-.wrapper {
+#wrapper {
     height: 80vh;
     width: 60vw;
 }
